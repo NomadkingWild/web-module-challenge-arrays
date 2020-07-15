@@ -62,7 +62,7 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(arr, flavor){
 
-   originalFlavors.unshift("Rainbow Sherbert")
+   arr.unshift(flavor)
        return originalFlavors;
    }
 
@@ -80,8 +80,7 @@ Your function should remove a flavor from the end of the array and console.log t
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
 function removeLastFlavor(arr){
-
-    originalFlavors.pop()
+        arr.pop();
         return originalFlavors;
     }
 
@@ -96,12 +95,12 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(arr,ind){
+function getFlavorByIndex(arr,index){
 
-    originalFlavors.push
+    return arr[index];
 
 }
-
+console.log(getFlavorByIndex(originalFlavors,3));
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
@@ -116,9 +115,10 @@ Hint: You can use .splice() for this
 */
 
 function removeFlavorByName(arr,flavor){
-
-    originalFlavors.splice(30,1);
-    return originalFlavors;
+    for(let i = 0; 0 < arr.length; i++){    
+            if(arr[i].includes(flavor)){    
+              return arr.splice(i, 1);
+  
 
 }
 console.log(removeFlavorByName(originalFlavors, "Vanilla"));
@@ -133,7 +133,7 @@ and should return a new array that is identical to the old array. You can name t
 
 function copy(arr1, arr2){
 
-    [...originalFlavors];
+   return arr2 = [...originalFlavors];
 
 }
 console.log(copy(originalFlavors));
@@ -155,7 +155,9 @@ hint - you can use the .includes method to help you solve this */
 function filterByWord(arr,flavor){
 
     for(let i = 0; 1 < originalFlavors.length; i++){
-        console.log(filterByWord[1].includes("Chocolate"));
+
+        console.log(filterByWord[i].includes("Chocolate"));
+         return 
     }
 
 }
