@@ -62,11 +62,11 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(arr, flavor){
 
-   arr.unshift(flavor)
+   arr.unshift(flavor);
        return originalFlavors;
-   }
+   
 
-
+}
 console.log(addFlavor(originalFlavors,"Rainbow Shrebet"));
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -86,6 +86,7 @@ function removeLastFlavor(arr){
 
 
 console.log(removeLastFlavor(originalFlavors));
+
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
 Your function should accept:
@@ -100,7 +101,8 @@ function getFlavorByIndex(arr,index){
     return arr[index];
 
 }
-console.log(getFlavorByIndex(originalFlavors,3));
+console.log(getFlavorByIndex(originalFlavors,2));
+
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
@@ -117,9 +119,9 @@ Hint: You can use .splice() for this
 function removeFlavorByName(arr,flavor){
     for(let i = 0; 0 < arr.length; i++){    
             if(arr[i].includes(flavor)){    
-              return arr.splice(i, 1);
+              return arr.splice(i,1);
   
-
+            
 }
 console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
@@ -131,10 +133,9 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(arr1, arr2){
-
-   return arr2 = [...originalFlavors];
-
+function copy(arr, arr2){
+    arr2 = [...arr];
+            return arr2;
 }
 console.log(copy(originalFlavors));
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
@@ -153,17 +154,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 hint - you can use the .includes method to help you solve this */
 
 function filterByWord(arr,flavor){
-
-    for(let i = 0; 1 < originalFlavors.length; i++){
-
-        console.log(filterByWord[i].includes("Chocolate"));
-         return 
+    let newArr = [];
+    for(let i = 0; 1 < arr.length; i++){
+        if(arr[i].includes(flavor)){
+            newArr.push(arr[i]);
+            return arr.includes([i],flavor);
+        }
+        return newArr;
+         
     }
-
-}
-
-
-
+    console.log(filterByWord[i].includes("Chocolate"));
+}}}
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
@@ -191,7 +192,6 @@ and should return a new array called randomFlavors with a length 31.
 
 forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].*/
 
-// Data ⬇️
 var newFlavors = ["Date night",
     "U.S.S Butterscotch (Stranger Things special)",
     "Honey Almond",
@@ -267,5 +267,4 @@ var regionalFlavors = ["Pink Bubblegum",
 function getRandomFlavors(/*code here*/){
 
     /*code here*/
-
 }
