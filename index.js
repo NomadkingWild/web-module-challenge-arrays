@@ -121,7 +121,8 @@ function removeFlavorByName(arr,flavor){
             if(arr[i].includes(flavor)){    
               return arr.splice(i,1);
   
-            
+            }       
+}
 }
 console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
@@ -163,8 +164,8 @@ function filterByWord(arr,flavor){
         return newArr;
          
     }
-    console.log(filterByWord[i].includes("Chocolate"));
-}}}
+    console.log(filterByWord(originalFlavors,"Chocolate"));
+}
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
